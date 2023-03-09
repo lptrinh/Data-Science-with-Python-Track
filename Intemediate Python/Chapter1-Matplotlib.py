@@ -25,10 +25,8 @@ plt.show()
 # Print the last item from years and populations
 print(year[-1])
 print(pop[-1])
-
 # Import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
-
 # Make a line plot: year on the x-axis, pop on the y-axis
 plt.plot(year, pop)
 plt.show()
@@ -42,10 +40,8 @@ plt.show()
 # Print the last item of gdp_cap and life_exp
 print(gdp_cap[-1])
 print(life_exp[-1])
-
 # Make a line plot, gdp_cap on the x-axis, life_exp on the y-axis
 plt.plot(gdp_cap, life_exp)
-
 # Display the plot
 plt.show()
 
@@ -53,65 +49,68 @@ plt.show()
 ###Scatter Plot (1)
 # Change the line plot below to a scatter plot
 plt.scatter(gdp_cap, life_exp)
-
 # Put the x-axis on a logarithmic scale
 plt.xscale('log')
-
 # Show plot
 plt.show()
 
 
-#Scatter plot (2)
+###Scatter plot (2)
 # Import package
 import matplotlib.pyplot as plt
-
 # Build Scatter plot
 plt.scatter(pop, life_exp)
-
 # Show plot
 plt.show()
 
 
 ##Histogram
-
 values = [0, 0.6, 1.4, 1.6, 2.2, 2.5, 2.6, 3.2, 3.5, 3.9, 4.2, 6]
 plt.hist(values, bins=3)
 
-#Build a histogram (1)
+
+###Build a histogram (1)
 # Create histogram of life_exp data
 plt.hist(life_exp)
-
 # Display histogram
 plt.show()
 
-#Build a histogram (2): bins
+
+###Build a histogram (2): bins
 # Build histogram with 5 bins
 plt.hist(life_exp, bins = 5)
-
 # Show and clear plot
 plt.show()
 plt.clf()
-
 # Build histogram with 20 bins
 plt.hist(life_exp, bins = 20)
-
 # Show and clear plot again
 plt.show()
 plt.clf()
 
-#Build a histogram (3): compare
+
+###Build a histogram (3): compare
 # Histogram of life_exp, 15 bins
 plt.hist(life_exp, bins = 15)
-
 # Show and clear plot
 plt.show()
 plt.clf()
-
 # Histogram of life_exp1950, 15 bins
 plt.hist(life_exp1950, bins = 15)
-
 # Show and clear plot again
 plt.show()
+
+
+###Choose the right plot (1)
+You're a professor teaching Data Science with Python, and you want to visually assess if the grades on your exam follow a particular distribution. Which plot do you use?
+>Histogram
+
+
+###Choose the right plot (2)
+You're a professor in Data Analytics with Python, and you want to visually assess if longer answers on exam questions lead to higher grades. Which plot do you use?
+>Scatter plot
+
+##Customization
 
 #Labels
 # Basic scatter plot, log scale
