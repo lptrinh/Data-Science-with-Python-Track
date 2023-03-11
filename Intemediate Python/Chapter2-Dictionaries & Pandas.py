@@ -155,56 +155,80 @@
       
       
   ##Pandas, Part 2
- 
+Square brackets:
+  COLUMN ACCESS []
+    brics["country"]
+    brics[["country", "..."]]
+
+  ROW ACCESS[]
+  brics[1:4] <lay hang 1,2,3> Row Index bat dau tu 0
+
+DISCUSSION[]
+
+loc (label-based)
+  ROW ACCESS loc 
+    brics.loc["RU"] ->hien thi dong hang doc
+    brics.loc[["RU","...",...]] -> dong hang ngang
+    tat ca cac cot
+  ROW & COLUMN loc
+    brics.loc[["RU", "IN", "CH"], ["country", "capital"]]
+  
+  COLUMN ACCESS
+    tat ca cac hang
+    brics.loc[:, ["country", "capital"]]
+
+
+iloc (integer position-based)
+
     ####Square Brackets (1)
       # Import cars data
-      import pandas as pd
+        import pandas as pd
       cars = pd.read_csv('cars.csv', index_col = 0)
       # Print out country column as Pandas Series
-      print(cars['country'])
+        print(cars['country'])
       # Print out country column as Pandas DataFrame
-      print(cars[['country']])
+        print(cars[['country']])
       # Print out DataFrame with country and drives_right columns
-      print(cars[['country', 'drives_right']])
+        print(cars[['country', 'drives_right']])
   
   
     ####Square Brackets (2)
       # Import cars data
-      import pandas as pd
-      cars = pd.read_csv('cars.csv', index_col = 0)
+        import pandas as pd
+        cars = pd.read_csv('cars.csv', index_col = 0)
       # Print out first 3 observations
-      print(cars[0:3])
+        print(cars[0:3])
       # Print out fourth, fifth and sixth observation
-      print(cars[3:6])
+        print(cars[3:6])
   
   
     ####loc and iloc (1)
       # Import cars data
-      import pandas as pd
-      cars = pd.read_csv('cars.csv', index_col = 0)
+          import pandas as pd
+          cars = pd.read_csv('cars.csv', index_col = 0)
       # Print out observation for Japan
-      print(cars.iloc[2])
+          print(cars.iloc[2])
       # Print out observations for Australia and Egypt
-      print(cars.loc[['AUS', 'EG']])
+          print(cars.loc[['AUS', 'EG']])
 
   
     ####loc and iloc (2)
       # Import cars data
-      import pandas as pd
-      cars = pd.read_csv('cars.csv', index_col = 0)
+        import pandas as pd
+        cars = pd.read_csv('cars.csv', index_col = 0)
       # Print out drives_right value of Morocco
-      print(cars.iloc[5, 2])
+        print(cars.iloc[5, 2])
       # Print sub-DataFrame
-      print(cars.loc[['RU', 'MOR'], ['country', 'drives_right']])
+        print(cars.loc[['RU', 'MOR'], ['country', 'drives_right']])
 
   
     ####loc and iloc (3)
       # Import cars data
-      import pandas as pd
-      cars = pd.read_csv('cars.csv', index_col = 0)
+        import pandas as pd
+        cars = pd.read_csv('cars.csv', index_col = 0)
       # Print out drives_right column as Series
-      print(cars.iloc[:, 2])
+        print(cars.iloc[:, 2])
       # Print out drives_right column as DataFrame
-      print(cars.iloc[:, [2]])
+        print(cars.iloc[:, [2]])
       # Print out cars_per_cap and drives_right as DataFrame
-      print(cars.loc[:, ['cars_per_cap', 'drives_right']])
+        print(cars.loc[:, ['cars_per_cap', 'drives_right']])
