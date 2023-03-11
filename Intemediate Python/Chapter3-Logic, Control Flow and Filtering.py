@@ -72,9 +72,40 @@ np.logical_not()
     # Both my_house and your_house smaller than 11
       print(np.logical_and(my_house < 11, your_house < 11))
 
-IF, ELIF, ELSE
 
-      
+IF, ELIF, ELSE
+if
+  if condition :
+      expression
+                      z = 4
+                      if z % 2 == 0 :
+                          print("z is even")  #True
+                      else :
+                          print("z is odd")   #False
+elif
+  if condition:
+      expression
+  elif condition:
+      expression
+  else :
+      expression
+                      z=3
+                      if z % 2 == 0 :
+                          print('z is divisible by 2')  #False
+                      elif z % 3 == 0 :
+                          print('z is divisible by 2')  #True
+                      else :
+                          print(('z is neither divisible by 2 nor by 3')  
+
+
+                      z=6
+                      if z % 2 == 0 :
+                          print('z is divisible by 2')  #True
+                      elif z % 3 == 0 :
+                          print('z is divisible by 2')  #Never reach
+                      else :
+                          print(('z is neither divisible by 2 nor by 3')  
+  
   #if
     # Define variables
       room = "kit"
